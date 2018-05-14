@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -13,15 +11,12 @@
             margin: 0;
             padding: 0;
             font-family: "Open Sans", sans-serif;
+            overflow: auto !important;
         }
 
         .apimatic-container {
             position: relative;
             top: 200px;
-        }
-
-        .run-button {
-            margin-right: 40px!important;
         }
 
         .relative-wrapper {
@@ -37,12 +32,13 @@
 
         .hosted-api-docs {
             position: relative;
+            min-width: 995px;
         }
 
         .portal-header {
             width: 100%;
             min-width: 995px;
-            height: 101px;
+            height: 70px;
             background: #fff url('') no-repeat no-repeat right;
             position: relative;
             z-index: 999;
@@ -56,7 +52,7 @@
         }
 
         .branding-container .logo {
-            width: 50%;
+            width: 60%;
             height: 70px;
             float: left;
             margin: 0 auto;
@@ -68,12 +64,12 @@
             position: relative;
             top: 50%;
             transform: translateY(-50%);
-
+            max-width: 40%;
         }
 
         .branding-container .logo p {
-            height: 30px;
-            line-height: 30px;
+            height: 40px;
+            line-height: 40px;
             float: left;
             color: #2e323c;
             font-size: 18px;
@@ -83,42 +79,18 @@
             position: relative;
             top: 50%;
             transform: translateY(-50%);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 55%;
         }
 
         .branding-container .navigation {
-            width: 50%;
+            width: 40%;
             height: 70px;
             float: left;
             position: relative;
             margin: 0 !important;
-        }
-
-        .branding-container .navigation ul {
-            float: right;
-        }
-
-        .branding-container .navigation ul li {
-            list-style: none;
-            font-size: 14px;
-            float: left;
-            margin-left: 30px;
-            font-size: 13px;
-            cursor: pointer;
-            color: #999;
-        }
-
-        .branding-container .navigation ul li a:hover {
-            color: #324251;
-        }
-
-        .branding-container .navigation ul li a {
-            text-decoration: none;
-            color: #999;
-            cursor: pointer;
-
-            &:hover {
-                color: #324251;
-            }
         }
 
         .portal {
@@ -127,99 +99,79 @@
             width: 100%;
         }
 
-        .portal-header .breadcrumb-container {
-            width: 100%;
-            height: 31px;
-            background: #2067a8;
+        .branding-container .navigation .center {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 30px;
         }
 
-        .portal-header .breadcrumb-container .left {
-            width: 50%;
-            float: left;
-        }
-
-        .portal-header .breadcrumb-container .right {
-            width: 50%;
-            float: left;
-        }
-
-        .portal-header .breadcrumb-container .breadcrumb-list {
-            background: transparent !important;
-            margin: 0;
-            padding: 5px 0 0 0;
-            list-style: none;
-            margin-left: 30px;
-        }
-
-        .portal-header .breadcrumb-container .breadcrumb-list li {
-            float: left;
-            line-height: 18px;
-        }
-
-        .portal-header .breadcrumb-container .breadcrumb-list li+li {
-            margin-left: 10px;
-        }
-
-        .portal-header .breadcrumb-container .breadcrumb-list li a {
-            color: rgba(255, 255, 255, 0.6) !important;
-            font-size: 12px;
-            line-height: 18px;
-            text-decoration: none;
-        }
-
-        .portal-header .breadcrumb-container .breadcrumb-list li.active a {
-            color: white !important;
-            font-size: 12px;
-            line-height: 18px;
-        }
-
-        .portal-header .breadcrumb-container .version-select {
-            padding-top: 3px;
+        .branding-container .navigation .center .version-select {
             float: right;
-            margin-right: 30px;
+            height: 30px;
+            line-height: 30px;
         }
 
-        .portal-header .breadcrumb-container .version-select label {
+        .branding-container .navigation .center .version-select label {
             font-size: 12px;
-            color: white;
+            color: #7c8395;
+            margin-right: 5px;
         }
 
-        .portal-header .breadcrumb-container .version-select select {
-            width: 130px;
-            height: 20px;
+        .branding-container .navigation .center .version-select select {
+            width: 100px;
+            height: 25px;
             background: none;
-            background: #2981d2 url('../images/selectArrowDown.svg') no-repeat center;
-            background-position: 95%;
-            border: 1px solid #2981d2;
-            border-radius: 0;
+            background: #fff url('/img/theme/Drop.svg') no-repeat center;
+            background-position: 90%;
+            border: 1px solid #d9dee5;
+            border-radius: 3px;
             -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
             padding: 1px 4px;
-            color: #fff;
+            color: #2981d2;
             font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
             margin-bottom: 0px;
             display: inline-block;
             margin-top: 3px;
-            -webkit-box-sizing: border-box!important;
-            -moz-box-sizing: border-box!important;
-            box-sizing: border-box!important;
+            -webkit-box-sizing: border-box !important;
+            -moz-box-sizing: border-box !important;
+            box-sizing: border-box !important;
         }
 
-        .portal-header .breadcrumb-container .version-select select option {
-            color: #fff;
-            font-weight: 13px;
-        }
-
-        .portal-header .breadcrumb-container .version-select select:hover,
-        .portal-header .breadcrumb-container .version-select select:active,
-        .portal-header .breadcrumb-container .version-select select:focus {
+        .branding-container .navigation .center .version-select select:hover,
+        .portal-header .navigation .version-select select:active,
+        .portal-header .navigation .version-select select:focus {
             outline: none;
             box-shadow: none;
+        }
+
+        .branding-container .navigation .center .home-button {
+            float: right;
+            line-height: 30px;
+            margin: 0 0 0 25px;
+        }
+
+        .branding-container .navigation .center .home-button .circle-base {
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: #d9dee5 url('../images/home.svg') no-repeat center;
+            border-radius: 50%;
+        }
+
+        .branding-container .navigation .center .home-button .circle-base:hover {
+            background-color: #ced4dd;
         }
     </style>
 
     <script>
         window.onload = function () {
             var versionSelect = document.getElementById("version-select");
+
             versionSelect.addEventListener('change', function () {
                 console.log("event triggers")
                 var selectedVersion = versionSelect.options[versionSelect.selectedIndex].value;
@@ -231,54 +183,31 @@
         }
     </script>
 </head>
-
 <body>
     <div>
         <div class="portal-header">
             <div class="branding-container">
                 <div class="logo">
                     <a href="https://apimatic.io/developer-experience-portal">
-                        <a href="https://apimatic.io/developer-experience-portal" target="_blank">
-                            <img src="../images/df5ea8e7-667d-4533-9b79-a1de67945a4d.svg" />
-                        </a>
+                        <img src="../images/df5ea8e7-667d-4533-9b79-a1de67945a4d.svg" />
                     </a>
                     <p> CodeGen and Transformer API</p>
                 </div>
                 <div class="navigation">
-
-                </div>
-            </div>
-            <!-- BREDCRUMB STARTS -->
-            <div class="breadcrumb-container">
-                <div class="left">
-                    <ul class="breadcrumb-list">
-                        <li>
-                            <a href="../">Home </a>
-                        </li>
-                        <li>
-                            <a> / </a>
-                        </li>
-                        <li class="active">
-                            <a>v 1.0</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="right">
-                    <div class="version-select">
-                        <form class="">
-                            <div class="">
-                                <label>Version</label>
-                                <select id="version-select" name="version">
-                                    <option selected="selected" value="1_0">1.0</option>
-                                </select>
-                            </div>
-                        </form>
+                    <div class="center">
+                        <div class="home-button">
+                            <a href="../" class="circle-base"></a>
+                        </div>
+                        <div class="version-select">
+                            <label>Version</label>
+                            <select id="version-select" name="version">
+                                <option selected="selected" value="1_0">1.0</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- BREDCRUMB ENDS -->
         </div>
-
         <div class="hosted-api-docs">
             <script type="text/javascript">
                 var font = document.createElement("link");
@@ -292,7 +221,7 @@
                 script.onload = function () {
                     APIMaticDevPortal.show({
                         container: "apimatic-widget",
-                        topElementHeight: 101,
+                        topElementHeight: 70,
                         apiKey: "t0oZ0RtoUk8CXCA9YGjL_z0Aope4niP4BwSYErNlx2_HbIUwrexTZDZtvtc74PwK",
                         baseUrl: "https://apimatic.io",
                         enableExport: true,
@@ -326,5 +255,4 @@
 
     </div>
 </body>
-
 </html>
