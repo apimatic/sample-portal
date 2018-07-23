@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,32 +8,24 @@
     <title> CodeGen and Transformer API - 1.0</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" />
     <style>
+        html,
         body {
+            width: 100%;
+            height: 100%;
             margin: 0;
             padding: 0;
             font-family: "Open Sans", sans-serif;
-            overflow: auto !important;
+            overflow: hidden !important;
         }
 
         .apimatic-container {
-            position: relative;
-            top: 200px;
-        }
-
-        .relative-wrapper {
-            width: 100%;
-            position: relative;
-            overflow-y: scroll;
-        }
-
-        .absolute-wrapper {
-            width: 100%;
-            position: absolute;
+            height: 100%;
         }
 
         .hosted-api-docs {
             position: relative;
             min-width: 995px;
+            height: calc(100vh - 70px);
         }
 
         .portal-header {
@@ -93,11 +86,6 @@
             margin: 0 !important;
         }
 
-        .portal {
-            outline: none;
-            border: none;
-            width: 100%;
-        }
 
         .branding-container .navigation .center {
             position: relative;
@@ -122,7 +110,7 @@
             width: 100px;
             height: 25px;
             background: none;
-            background: #fff url('/img/theme/Drop.svg') no-repeat center;
+            background: #fff url('../images/select-arrow-down.svg') no-repeat center;
             background-position: 90%;
             border: 1px solid #d9dee5;
             border-radius: 3px;
@@ -183,76 +171,72 @@
         }
     </script>
 </head>
+
 <body>
-    <div>
-        <div class="portal-header">
-            <div class="branding-container">
-                <div class="logo">
-                    <a href="https://apimatic.io/developer-experience-portal">
-                        <img src="../images/df5ea8e7-667d-4533-9b79-a1de67945a4d.svg" />
-                    </a>
-                    <p> CodeGen and Transformer API</p>
-                </div>
-                <div class="navigation">
-                    <div class="center">
-                        <div class="home-button">
-                            <a href="../" class="circle-base"></a>
-                        </div>
-                        <div class="version-select">
-                            <label>Version</label>
-                            <select id="version-select" name="version">
-                                <option selected="selected" value="1_0">1.0</option>
-                            </select>
-                        </div>
+    <!-- Portal Header starts -->
+    <div class="portal-header">
+        <div class="branding-container">
+            <div class="logo">
+                <a href="https://apimatic.io/developer-experience-portal">
+                    <img src="../images/apimatic-logo.svg" />
+                </a>
+                <p> CodeGen and Transformer API</p>
+            </div>
+            <div class="navigation">
+                <div class="center">
+                    <div class="home-button">
+                        <a href="../" class="circle-base"></a>
+                    </div>
+                    <div class="version-select">
+                        <label>Version</label>
+                        <select id="version-select" name="version">
+                            <option selected="selected" value="1_0">1.0</option>
+                        </select>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="hosted-api-docs">
-            <script type="text/javascript">
-                var font = document.createElement("link");
-                font.rel = "stylesheet";
-                font.href = "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800";
-                var portalStyle = document.createElement("link");
-                portalStyle.rel = "stylesheet";
-                portalStyle.href = "https://dxjs.apimatic.io/static/css/main.9b04753e.css";
-                var script = document.createElement("script");
-                script.src = "https://dxjs.apimatic.io/static/js/portal.v4.js";
-                script.onload = function () {
-                    APIMaticDevPortal.show({
-                        container: "apimatic-widget",
-                        topElementHeight: 70,
-                        apiKey: "t0oZ0RtoUk8CXCA9YGjL_z0Aope4niP4BwSYErNlx2_HbIUwrexTZDZtvtc74PwK",
-                        baseUrl: "https://apimatic.io",
-                        enableExport: true,
-                        allowedLanguages: [
-                            "docs-http",
-                            "cs_net_standard_lib",
-                            "cs_portable_net_lib",
-                            "java_gradle_android_lib",
-                            "objc_cocoa_touch_ios_lib",
-                            "java_eclipse_jre_lib",
-                            "php_generic_lib",
-                            "python_generic_lib",
-                            "ruby_generic_lib",
-                            "angular_javascript_lib",
-                            "node_javascript_lib",
-                            "go_generic_lib"
-                        ],
-                        themeOverrides: {
-                            palette: {
-                                primaryColor1: "#2981d2"
-                            }
-                        }
-                    });
-                };
-                document.getElementsByTagName("head")[0].appendChild(portalStyle);
-                document.getElementsByTagName("head")[0].appendChild(script);
-                document.getElementsByTagName("head")[0].appendChild(font);
-            </script>
-            <div id="apimatic-widget" style="height:100%" />
-        </div>
-
     </div>
+    <!-- Portal Header starts -->
+    <!-- Portal starts -->
+    <div class="hosted-api-docs">
+        <script type="text/javascript">
+            var script = document.createElement("script");
+            script.src = "https://dxjs.apimatic.io/static/js/portal.v5.js";
+            script.onload = function () {
+                APIMaticDevPortal.show({
+                    container: "apimatic-widget",
+                    portalStyle: "default",
+                    apiKey: "t0oZ0RtoUk8CXCA9YGjL_z0Aope4niP4BwSYErNlx2_HbIUwrexTZDZtvtc74PwK",
+                    enableExport: true,
+                    allowedLanguages: [
+                        "docs-http",
+                        "cs_net_standard_lib",
+                        "cs_universal_windows_platform_lib",
+                        "cs_portable_net_lib",
+                        "java_gradle_android_lib",
+                        "objc_cocoa_touch_ios_lib",
+                        "java_eclipse_jre_lib",
+                        "php_generic_lib",
+                        "python_generic_lib",
+                        "ruby_generic_lib",
+                        "angular_javascript_lib",
+                        "node_javascript_lib",
+                        "go_generic_lib"
+                    ],
+                    themeOverrides: {
+                        palette: {
+                            primaryColor1: "#2981d2"
+                        }
+                    }
+                });
+            };
+            document.getElementsByTagName("head")[0].appendChild(script);
+        </script>
+        <div id="apimatic-widget" style="height: 100%; width: 100%;" />
+    </div>
+    <!-- Portal Ends -->
+
 </body>
+
 </html>
